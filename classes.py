@@ -10,9 +10,9 @@ caminho_arquivo = os.path.join(diretorio, nome_arquivo)
 
 
 class Despesa:
-    def __init__(self, id, descricao, valor, categoria=None):
+    def __init__(self, id, data, descricao, valor, categoria=None):
         self.id = id
-        self.data = datetime.now()strftime('d%-m%-Y%')
+        self.data = datetime.now()strftime('d%-m%-Y%') #ARRUMAR ESSA BAZORDIA BRUNO!!!!!
         self.descricao = descricao
         self.valor = valor
         self.categoria = categoria
@@ -29,10 +29,11 @@ class RastreadorDeDespesas:
     def CarregarDespesas(self): #abreo json
         if os.path.exists(caminho_arquivo):
             with open("despesas.json", "r", encoding="utf-8") as arquivo:
-                tarefas = json.load(arquivo)
+                self.despesas = json.load(arquivo)
 
     def SalvarDesperas(self): #salva o json
-        pass
+        with open("despesas.json", "w", encoding="utf-8") as arquivo:
+            json.dump(self.despesas, arquivo, indent=4)
 
     def AdicionarDespesas(self):
         pass
