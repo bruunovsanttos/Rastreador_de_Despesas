@@ -1,4 +1,12 @@
 import datetime
+import os
+import json
+import argparse
+
+
+diretorio = "C:\Users\bruvieira\Desktop\Nova_pasta\Rastreador_de_despesas\Rastreador_de_Despesas"
+nome_arquivo = "despesas.json"
+caminho_arquivo = os.path.join(diretorio, nome_arquivo)
 
 
 class Despesa:
@@ -19,7 +27,9 @@ class RastreadorDeDespesas:
         self.despesas = []
 
     def CarregarDespesas(self): #abreo json
-        pass
+        if os.path.exists(caminho_arquivo):
+            with open("despesas.json", "r", encoding="utf-8") as arquivo:
+                tarefas = json.load(arquivo)
 
     def SalvarDesperas(self): #salva o json
         pass
@@ -33,7 +43,7 @@ class RastreadorDeDespesas:
     def ExcluirDespesas(self):
         pass
 
-    
+
 
 
 
