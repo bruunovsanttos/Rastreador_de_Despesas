@@ -35,6 +35,14 @@ class RastreadorDeDespesas:
         with open("despesas.json", "w", encoding="utf-8") as arquivo:
             json.dump(self.despesas, arquivo, indent=4)
 
+    def GerarId(self):
+        pass
+
+    def DataAtual(self):
+        data = datetime.now()
+        data_formatada = data.strftime("%d/%m/%y %H:%M:%S")
+        return data_formatada
+
     def AdicionarDespesas(self, valor, descricao, categoria):
         CarregarDepesas()
 
@@ -51,7 +59,7 @@ class RastreadorDeDespesas:
         "categoria" = categoria
         "data" = # fazer a def de data
         }
-        
+
         SalvarDespesas()
 
     def MostrarDespesas(self):
