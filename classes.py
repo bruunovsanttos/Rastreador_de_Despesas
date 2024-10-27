@@ -4,7 +4,7 @@ import json
 import argparse
 
 
-diretorio = "C:\Users\bruvieira\Desktop\Nova_pasta\Rastreador_de_despesas\Rastreador_de_Despesas"
+diretorio = "C:/Users/bruvieira/Desktop/Nova_pasta/Rastreador_de_despesas/Rastreador_de_Despesas"
 nome_arquivo = "despesas.json"
 caminho_arquivo = os.path.join(diretorio, nome_arquivo)
 
@@ -26,7 +26,7 @@ class RastreadorDeDespesas:
     def __init__(self):
         self.despesas = []
 
-    def CarregarDespesas(self): #abreo json
+    def CarregarDespesas(self): #abre o json
         if os.path.exists(caminho_arquivo):
             with open("despesas.json", "r", encoding="utf-8") as arquivo:
                 self.despesas = json.load(arquivo)
@@ -35,8 +35,24 @@ class RastreadorDeDespesas:
         with open("despesas.json", "w", encoding="utf-8") as arquivo:
             json.dump(self.despesas, arquivo, indent=4)
 
-    def AdicionarDespesas(self):
-        pass
+    def AdicionarDespesas(self, valor, descricao, categoria):
+        CarregarDepesas()
+
+        gastos = []
+
+        valor = float(input(f"Qual o valor da despesa?"))
+        descricao = str(input(f"Descrição do gasto"))
+        categoria = str(input(f"Em qual categoria deseja colocar o gasto?"))
+
+        novo_gasto = {
+        "id" = #tem que fazer a def do id ainda
+        "valor" = valor
+        "descricao" = descricao
+        "categoria" = categoria
+        "data" = # fazer a def de data
+        }
+        
+        SalvarDespesas()
 
     def MostrarDespesas(self):
         pass
