@@ -36,7 +36,8 @@ class RastreadorDeDespesas:
             json.dump(self.despesas, arquivo, indent=4)
 
     def GerarId(self):
-        pass
+        max(tarefa['id'] for gasto in gastos) + 1
+        return
 
     def DataAtual(self):
         data = datetime.now()
@@ -48,16 +49,16 @@ class RastreadorDeDespesas:
 
         gastos = []
 
-        valor = float(input(f"Qual o valor da despesa?"))
-        descricao = str(input(f"Descrição do gasto"))
-        categoria = str(input(f"Em qual categoria deseja colocar o gasto?"))
+        valor_gasto = float(input(f"Qual o valor da despesa?"))
+        descricao_gasto = str(input(f"Descrição do gasto"))
+        categoria_gasto = str(input(f"Em qual categoria deseja colocar o gasto?"))
 
         novo_gasto = {
-        "id" = #tem que fazer a def do id ainda
-        "valor" = valor
-        "descricao" = descricao
-        "categoria" = categoria
-        "data" = # fazer a def de data
+        "id" = GerarId(self)
+        "valor" = valor_gasto
+        "descricao" = descricao_gasto
+        "categoria" = categoria_gasto
+        "data" = DataAtual()
         }
 
         SalvarDespesas()
