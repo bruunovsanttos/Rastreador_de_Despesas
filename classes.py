@@ -12,7 +12,7 @@ caminho_arquivo = os.path.join(diretorio, nome_arquivo)
 class Despesa:
     def __init__(self, id, data, descricao, valor, categoria=None):
         self.id = id
-        self.data = self.DataAtual() 
+        self.data = self.DataAtual()
         self.descricao = descricao
         self.valor = valor
         self.categoria = categoria
@@ -45,7 +45,7 @@ class RastreadorDeDespesas:
         return data_formatada
 
     def AdicionarDespesas(self):
-        self.CarregarDepesas()
+        self.CarregarDespesas()
 
         gastos = []
 
