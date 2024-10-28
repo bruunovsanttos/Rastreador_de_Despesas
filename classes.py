@@ -12,7 +12,7 @@ caminho_arquivo = os.path.join(diretorio, nome_arquivo)
 class Despesa:
     def __init__(self, id, data, descricao, valor, categoria=None):
         self.id = id
-        self.data = datetime.now()strftime('d%-m%-Y%') #ARRUMAR ESSA BAZORDIA BRUNO!!!!!
+        self.data = self.DataAtual() 
         self.descricao = descricao
         self.valor = valor
         self.categoria = categoria
@@ -36,7 +36,7 @@ class RastreadorDeDespesas:
             json.dump(self.despesas, arquivo, indent=4)
 
     def GerarId(self):
-        max(tarefa['id'] for gasto in gastos) + 1
+        max(gasto['id'] for gasto in gastos) + 1
         return
 
     def DataAtual(self):
@@ -44,8 +44,8 @@ class RastreadorDeDespesas:
         data_formatada = data.strftime("%d/%m/%y %H:%M:%S")
         return data_formatada
 
-    def AdicionarDespesas(self, valor, descricao, categoria):
-        CarregarDepesas()
+    def AdicionarDespesas(self):
+        self.CarregarDepesas()
 
         gastos = []
 
@@ -54,14 +54,17 @@ class RastreadorDeDespesas:
         categoria_gasto = str(input(f"Em qual categoria deseja colocar o gasto?"))
 
         novo_gasto = {
-        "id" = GerarId(self)
-        "valor" = valor_gasto
-        "descricao" = descricao_gasto
-        "categoria" = categoria_gasto
-        "data" = DataAtual()
+        "id" : self.GerarId(),
+        "valor" : valor_gasto,
+        "descricao" : descricao_gasto,
+        "categoria" : categoria_gasto,
+        "data" : self.DataAtual()
         }
 
-        SalvarDespesas()
+        gastos.append(novo_gasto)
+
+
+        self.SalvarDespesas()
 
     def MostrarDespesas(self):
         pass
