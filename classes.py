@@ -1,4 +1,4 @@
-import datetime
+from datetime import datetime
 import os
 import json
 
@@ -40,24 +40,24 @@ class RastreadorDeDespesas:
         max((gasto['id'] for gasto in self.despesas), default=0) + 1
         return
 
-    def DataAtual(self):
-        data = datetime.now()
-        data_formatada = data.strftime("%d/%m/%y %H:%M:%S")
+    def data_atual(self):
+        data = datetime.now()  # Agora está correto
+        data_formatada = data.strftime("%d/%m/%Y %H:%M:%S")
         return data_formatada
 
-    def adicionar_despesas(self):
+    def adicionar_despesas(self, descricao, valor, categoria):
 
-        valor_gasto = float(input(f"Qual o valor da despesa?"))
-        descricao_gasto = str(input(f"Descrição do gasto"))
-        categoria_gasto = str(input(f"Em qual categoria deseja colocar o gasto?"))
+        #valor_gasto = float(input(f"Qual o valor da despesa?"))
+        #descricao_gasto = str(input(f"Descrição do gasto"))
+        #categoria_gasto = str(input(f"Em qual categoria deseja colocar o gasto?"))
 
         novo_gasto = {
         "id" : self.GerarId(),
-        "valor" : valor_gasto,
-        "descricao" : descricao_gasto,
-        "categoria" : categoria_gasto,
-        "data" : self.DataAtual(),
-        "atualizado": self.DataAtual()
+        "valor" : valor,
+        "descricao" : descricao,
+        "categoria" : categoria,
+        "data" : self.data_atual(),
+
         }
 
         self.despesas.append(novo_gasto)

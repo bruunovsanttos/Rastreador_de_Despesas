@@ -1,27 +1,22 @@
 import classes
 import argparse
 
-
 def main():
-    parser = argparse.ArgumentParser(description="Rastreador de Gastos")
+    parser = argparse.ArgumentParser(description="Rastreador de Despesas")
     subparsers = parser.add_subparsers(dest="comando")
 
-    parser_add = subparsers.add_parser("add", help="Adiciona nova tarefa")
+    parser_add = subparsers.add_parser("add", help="Adiciona uma nova despesa")
     parser_add.add_argument("--descricao", type=str, required=True, help="Descrição da despesa")
     parser_add.add_argument("--valor", type=float, required=True, help="Valor da despesa")
     parser_add.add_argument("--categoria", type=str, help="Categoria da despesa")
 
+    args = parser.parse_args()
 
-    args= parser.parse_args()
-
-
-    despesa = classes.Despesa()
-    rastreador = classes.RastreadorDeDespesas()
-
+    rastreador = classes.RastreadorDeDespesas()  # Cria a instância do rastreador
 
     if args.comando == "add":
-        despesa.AdicionarDespesas(args.descricao, args.valor, args.categotia)
+        # Chama o método de adicionar despesas passando os argumentos
+        rastreador.adicionar_despesas(args.descricao, args.valor, args.categoria)
 
-
-    if __name__ == "__main__":
-        main()
+if __name__ == "__main__":
+    main()
