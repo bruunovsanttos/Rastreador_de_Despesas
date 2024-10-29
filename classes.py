@@ -72,6 +72,11 @@ class RastreadorDeDespesas:
     def ExcluirDespesas(self):
         pass
 
+    def AlterarDespesa(self):
+        pass
+
+    def GastosTempo(self):
+        pass
 
 
 

@@ -12,11 +12,13 @@ def main():
 
     args= parser.parse_args()
 
+
+    despesa = classes.Despesa()
     rastreador = classes.RastreadorDeDespesas()
 
 
     if args.comando == "add":
-        rastreador.AdicionarDespesas(args.descricao, args.valor, args.categotia)
+        despesa.AdicionarDespesas(args.descricao, args.valor, args.categotia)
 
 
     if __name__ == "__main__":
