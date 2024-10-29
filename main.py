@@ -12,8 +12,11 @@ def main():
 
     args= parser.parse_args()
 
+    rastreador = classes.RastreadorDeDespesas()
+
+
     if args.comando == "add":
-        AdicionarDespesas(args.descricao)
+        rastreador.AdicionarDespesas(args.descricao, args.valor, args.categotia)
 
 
     if __name__ == "__main__":
