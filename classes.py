@@ -58,7 +58,8 @@ class RastreadorDeDespesas:
         "valor" : valor_gasto,
         "descricao" : descricao_gasto,
         "categoria" : categoria_gasto,
-        "data" : self.DataAtual()
+        "data" : self.DataAtual(),
+        "atualizado": self.DataAtual()
         }
 
         gastos.append(novo_gasto)
