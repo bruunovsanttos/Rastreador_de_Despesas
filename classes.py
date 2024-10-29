@@ -1,7 +1,7 @@
 import datetime
 import os
 import json
-import argparse
+
 
 
 diretorio = "C:/Users/bruvieira/Desktop/Nova_pasta/Rastreador_de_despesas/Rastreador_de_Despesas"
@@ -25,18 +25,19 @@ class RastreadorDeDespesas:
 
     def __init__(self):
         self.despesas = []
+        self.carregar_despesas()
 
-    def CarregarDespesas(self): #abre o json
+    def carregar_despesas(self): #abre o json
         if os.path.exists(caminho_arquivo):
             with open("despesas.json", "r", encoding="utf-8") as arquivo:
                 self.despesas = json.load(arquivo)
 
-    def SalvarDesperas(self): #salva o json
+    def salvar_despesas(self): #salva o json
         with open("despesas.json", "w", encoding="utf-8") as arquivo:
             json.dump(self.despesas, arquivo, indent=4)
 
     def GerarId(self):
-        max(gasto['id'] for gasto in gastos) + 1
+        max((gasto['id'] for gasto in self.despesas), default=0) + 1
         return
 
     def DataAtual(self):
@@ -44,10 +45,7 @@ class RastreadorDeDespesas:
         data_formatada = data.strftime("%d/%m/%y %H:%M:%S")
         return data_formatada
 
-    def AdicionarDespesas(self):
-        self.CarregarDespesas()
-
-        gastos = []
+    def adicionar_despesas(self):
 
         valor_gasto = float(input(f"Qual o valor da despesa?"))
         descricao_gasto = str(input(f"Descrição do gasto"))
@@ -62,10 +60,10 @@ class RastreadorDeDespesas:
         "atualizado": self.DataAtual()
         }
 
-        gastos.append(novo_gasto)
+        self.despesas.append(novo_gasto)
+        self.salvar_despesas()
 
-
-        self.SalvarDespesas()
+        print("Despesa salva com sucesso.")
 
     def MostrarDespesas(self):
         pass

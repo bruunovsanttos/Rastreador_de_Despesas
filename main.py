@@ -7,7 +7,9 @@ def main():
     subparsers = parser.add_subparsers(dest="comando")
 
     parser_add = subparsers.add_parser("add", help="Adiciona nova tarefa")
-    parser_add.add_argument("descrição", type=str, help="Descrição de tarefa")
+    parser_add.add_argument("--descricao", type=str, required=True, help="Descrição da despesa")
+    parser_add.add_argument("--valor", type=float, required=True, help="Valor da despesa")
+    parser_add.add_argument("--categoria", type=str, help="Categoria da despesa")
 
 
     args= parser.parse_args()
