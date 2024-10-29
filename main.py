@@ -13,7 +13,7 @@ def main():
     args= parser.parse_args()
 
     if args.comando == "add":
-        AdicionarDespesas(self, args.descricao)
+        AdicionarDespesas(args.descricao)
 
 
     if __name__ == "__main__":
