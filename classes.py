@@ -81,15 +81,13 @@ class RastreadorDeDespesas:
         for despesa in self.despesas:
             print(f"Id: {despesa['id']} \n Descrição: {despesa['descricao']} \n Valor: {despesa['valor']} \n Data: {despesa['data']} \n Categoria: {despesa['categoria']}")
 
-
-
-    def ExcluirDespesas(self):
+    def excluir_despesas(self):
         pass
 
-    def AlterarDespesa(self):
+    def alterar_despesa(self):
         pass
 
-    def GastosTempo(self):
+    def gastos_tempo(self):
         pass
 
 
