@@ -96,7 +96,16 @@ class RastreadorDeDespesas:
                 print("Não ha nenhuma despesa com este ID.")
 
         self.salvar_despesas()
+    #def excluir_despesas(self, id):
+    #self.carregar_despesas()
 
+    #for despesa in self.despesas == 'id':
+    #    if not id in despesas:
+     #       print("Não há nenhuma despesa com este ID.")
+      #  else:
+       #     self.despesas.remove(despesa)
+        #    print(f"Despesa {despesa['id']}, {despesa['descricao']} deletada com sucesso.")
+         #   break
 
 
     def alterar_despesa(self):
