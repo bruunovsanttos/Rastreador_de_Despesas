@@ -71,8 +71,17 @@ class RastreadorDeDespesas:
 
         print("Despesa salva com sucesso.")
 
-    def MostrarDespesas(self):
-        pass
+    def mostrar_despesas(self):
+        self.carregar_despesas()
+
+        if not self.despesas:
+            print("Não ha despesas para mostrar.")
+            return
+            
+        for despesa in self.despesas:
+            print(f"Id: {despesa['id']} \n Descrição: {despesa['descricao']} \n Valor: {despesa['valor']} \n Data: {despesa['data']} \n Categoria: {despesa['categoria']}")
+
+
 
     def ExcluirDespesas(self):
         pass
