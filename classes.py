@@ -37,8 +37,16 @@ class RastreadorDeDespesas:
             json.dump(self.despesas, arquivo, indent=4)
 
     def gerar_id(self):
-        gerador_id = max(despesa['id'] for despesa in self.despesas) ++ 1
-        return gerador_id
+        ids_validos = []  # Inicializa uma lista vazia para IDs válidos
+
+        for despesa in self.despesas:
+            if despesa['id'] is not None:  # Verifica se o ID não é None
+                ids_validos.append(despesa['id'])  # Adiciona IDs válidos à lista
+
+        if not ids_validos:  # Se não houver IDs válidos
+            return 1
+        else:
+            return max(ids_validos) + 1  # Retorna o maior ID + 1
 
     def data_atual(self):
         data = datetime.now()  # Agora está correto
