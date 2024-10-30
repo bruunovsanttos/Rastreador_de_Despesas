@@ -72,6 +72,7 @@ class RastreadorDeDespesas:
         print("Despesa salva com sucesso.")
 
     def mostrar_despesas(self):
+
         self.carregar_despesas()
 
         if not self.despesas:
@@ -81,8 +82,22 @@ class RastreadorDeDespesas:
         for despesa in self.despesas:
             print(f"Id: {despesa['id']} \n Descrição: {despesa['descricao']} \n Valor: {despesa['valor']:.2f} \n Data: {despesa['data']} \n Categoria: {despesa['categoria']}")
 
-    def excluir_despesas(self):
-        pass
+    def excluir_despesas(self, id):
+        self.carregar_despesas()
+
+        despesa_encontrada = False
+
+        for despesa in self.despesas:
+            if despesa['id'] in self.despesas:
+                self.despesas.remove(despesa)
+                print(f"Despesa {despesa['id']}, {despesa['descricao']} deletada com sucesso.")
+                break
+            if not despesa_encontrada:
+                print("Não ha nenhuma despesa com este ID.")
+
+        self.salvar_despesas()
+
+
 
     def alterar_despesa(self):
         pass
