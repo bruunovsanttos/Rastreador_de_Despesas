@@ -15,6 +15,12 @@ def main():
     parser_add = subparsers.add_parser("deletar", help="Deleta uma despesa")
     parser_add.add_argument("--id", type=int, required=True, help="Id da despesa")
 
+    parser_add = subparsers.add_parser("alterar", help= "Altera descrição e valor de uma despesa")
+    parser_add.add_argument("--id", type= int, required=True, help="Id da despesa a ser alterada")
+    parser_add.add_argument("--descricao", type=str, required=True, help="Descrição a ser alterada")
+    parser_add.add_argument("--valor", type=float, required=True, help="valor a ser alterado")
+
+
 
 
     args = parser.parse_args()
@@ -28,6 +34,8 @@ def main():
         rastreador.mostrar_despesas()
     elif args.comando == "deletar":
         rastreador.excluir_despesas(args.id)
+    elif args.comando == "alterar":
+        rastreador.alterar_despesa(args.id)
 
 if __name__ == "__main__":
     main()
