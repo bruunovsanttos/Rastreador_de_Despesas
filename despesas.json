@@ -7,13 +7,6 @@
         "data": "29/10/2024 13:17:01"
     },
     {
-        "id": 1,
-        "valor": 20.0,
-        "descricao": "almoco",
-        "categoria": "lanche",
-        "data": "30/10/2024 11:29:48"
-    },
-    {
         "id": 2,
         "valor": 20.0,
         "descricao": "almoco",
@@ -33,5 +26,12 @@
         "descricao": "almoco",
         "categoria": "lanche",
         "data": "30/10/2024 11:53:16"
+    },
+    {
+        "id": 5,
+        "valor": 62.5,
+        "descricao": "role",
+        "categoria": "lazer",
+        "data": "31/10/2024 12:35:31"
     }
 ]
