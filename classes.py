@@ -123,8 +123,11 @@ class RastreadorDeDespesas:
                 despesa_encontrada = True
                 print(f"A desepsa {despesa['id']} foi alterada como {despesa['descricao']} e valor de {despesa['valor']}.")
                 break
+
         if not despesa_encontrada:
             print("Não ha nenhuma despesa com este ID.")
+
+        self.salvar_despesas()
 
 
     def gastos_tempo(self):
