@@ -33,12 +33,5 @@
         "descricao": "almoco",
         "categoria": "lanche",
         "data": "30/10/2024 11:53:16"
-    },
-    {
-        "id": 5,
-        "valor": 3.2,
-        "descricao": "p\u00e3o",
-        "categoria": "lanche da tarde",
-        "data": "30/10/2024 12:53:26"
     }
 ]

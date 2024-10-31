@@ -27,7 +27,7 @@ def main():
     elif args.comando == "mostrar":
         rastreador.mostrar_despesas()
     elif args.comando == "deletar":
-        rastreador.excluir_despesas()
+        rastreador.excluir_despesas(args.id)
 
 if __name__ == "__main__":
     main()
