@@ -12,6 +12,10 @@ def main():
 
     parser_add = subparsers.add_parser("mostrar", help="Mostrar despesas")
 
+    parser_add = subparsers.add_parser("deletar", help="Deleta uma despesa")
+    parser_add.add_argument("--id", type=int, required=True, help="Id da despesa")
+
+
 
     args = parser.parse_args()
 
@@ -22,6 +26,8 @@ def main():
         rastreador.adicionar_despesas(args.descricao, args.valor, args.categoria)
     elif args.comando == "mostrar":
         rastreador.mostrar_despesas()
+    elif args.comando == "deletar":
+        rastreador.excluir_despesas()
 
 if __name__ == "__main__":
     main()
