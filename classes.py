@@ -63,6 +63,7 @@ class RastreadorDeDespesas:
         "descricao" : descricao,
         "categoria" : categoria,
         "data" : self.data_atual(),
+        "modificado": self.data_atual()
 
         }
 
@@ -109,8 +110,22 @@ class RastreadorDeDespesas:
          #   break
 
 
-    def alterar_despesa(self):
-        pass
+    def alterar_despesa(self, id):
+        self.carregar_despesas()
+
+        despesa_encontrada  = False
+
+        for despesa in self.despesas:
+            if despesa['id'] == id:
+                despesa['descricao'] = str(input("Qual descrição você deseja colocar agora?"))
+                despesa['valor'] = float(input("qual o valor gasto?"))
+                despesa['modificado'] = self.data_atual()
+                despesa_encontrada = True
+                print(f"A desepsa {despesa['id']} foi alterada como {despesa['descricao']} e valor de {despesa['valor']}.")
+                break
+        if not despesa_encontrada:
+            print("Não ha nenhuma despesa com este ID.")
+
 
     def gastos_tempo(self):
         pass
