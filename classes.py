@@ -121,7 +121,7 @@ class RastreadorDeDespesas:
                 despesa['valor'] = float(input("qual o valor gasto?"))
                 despesa['modificado'] = self.data_atual()
                 despesa_encontrada = True
-                print(f"A desepsa {despesa['id']} foi alterada como {despesa['descricao']} e valor de {despesa['valor']}.")
+                print(f"A desepsa {despesa['id']} foi alterada como {despesa['descricao']} e valor de {despesa['valor']} modificado em {despesa['modificado']}.")
                 break
 
         if not despesa_encontrada:
