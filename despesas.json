@@ -4,21 +4,24 @@
         "valor": 20.0,
         "descricao": "almoco",
         "categoria": "lanche",
-        "data": "30/10/2024 11:29:52"
+        "data": "30/10/2024 11:29:52",
+        "modificado": "30/10/2024 11:29:52"
     },
     {
         "id": 3,
         "valor": 20.0,
         "descricao": "almoco",
         "categoria": "lanche",
-        "data": "30/10/2024 11:30:29"
+        "data": "30/10/2024 11:30:29",
+        "modificado": "30/10/2024 11:30:29"
     },
     {
         "id": 4,
         "valor": 20.0,
         "descricao": "almoco",
         "categoria": "lanche",
-        "data": "30/10/2024 11:53:16"
+        "data": "30/10/2024 11:53:16",
+        "modificado": "30/10/2024 11:53:16"
     },
     {
         "id": 5,

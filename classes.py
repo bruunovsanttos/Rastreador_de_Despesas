@@ -81,7 +81,7 @@ class RastreadorDeDespesas:
             return
             
         for despesa in self.despesas:
-            print(f"Id: {despesa['id']} \n Descrição: {despesa['descricao']} \n Valor: {despesa['valor']:.2f} \n Data: {despesa['data']} \n Categoria: {despesa['categoria']}")
+            print(f"Id: {despesa['id']} \n Descrição: {despesa['descricao']} \n Valor: {despesa['valor']:.2f} \n Data: {despesa['data']} \n Categoria: {despesa['categoria']} \n Modificado em: {despesa['modificado']}")
 
     def excluir_despesas(self, id):
         self.carregar_despesas()
