@@ -139,7 +139,14 @@ class RastreadorDeDespesas:
             total += despesa['valor']
         print(f"Total de despesas é de: R${total:.2f}")
 
-
+    def resumo_mensal(self, mes):
+        total_mensal = 0  # Inicializa o total mensal como zero
+        for despesa in self.despesas:  # Itera sobre cada despesa
+            # Extrai o mês da data da despesa
+            mes_despesa = int(despesa['data'].split("/")[1])
+            if mes_despesa == mes:  # Verifica se o mês da despesa é igual ao mês desejado
+                total_mensal += despesa['valor']  # Adiciona o valor da despesa ao total mensal
+        print(f"Total de despesas para o mês {mes}: R${total_mensal:.2f}")  # Exibe o total mensal formatado
 
 
 
