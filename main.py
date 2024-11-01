@@ -18,6 +18,7 @@ def main():
     parser_add = subparsers.add_parser("alterar", help= "Altera descrição e valor de uma despesa")
     parser_add.add_argument("--id", type= int, required=True, help="Id da despesa a ser alterada")
 
+    parser_add = subparsers.add_parser("gastos", help="Mostrar gastos totais")
 
 
 
@@ -35,6 +36,8 @@ def main():
         rastreador.excluir_despesas(args.id)
     elif args.comando == "alterar":
         rastreador.alterar_despesa(args.id)
+    elif args.comando == "gastos":
+        rastreador.resumo_gastos_totais()
 
 if __name__ == "__main__":
     main()
