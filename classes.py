@@ -133,7 +133,11 @@ class RastreadorDeDespesas:
     def gastos_tempo(self):
         pass
 
-
+    def resumo_gastos_totais(self):
+        total = 0
+        for despesa in self.despesas:
+            total += despesa['valor']
+        print(f"Total de despesas é de: R${total:.2f}")
 
 
 
