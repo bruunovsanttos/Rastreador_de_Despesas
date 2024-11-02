@@ -22,7 +22,6 @@ def main():
 
 
 
-
     args = parser.parse_args()
 
     rastreador = classes.RastreadorDeDespesas()  # Cria a instância do rastreador
@@ -38,6 +37,8 @@ def main():
         rastreador.alterar_despesa(args.id)
     elif args.comando == "gastos":
         rastreador.resumo_gastos_totais()
+    elif args.comando == "resumo mensal":
+        rastreador.resumo_mensal(args.mes)
 
 if __name__ == "__main__":
     main()
