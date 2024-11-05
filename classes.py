@@ -25,14 +25,21 @@ class RastreadorDeDespesas:
 
     def __init__(self):
         self.despesas = []
+        self.orcamento_mensal = 0.0
         self.carregar_despesas()
 
     def carregar_despesas(self): #abre o json
         if os.path.exists(caminho_arquivo):
             with open("despesas.json", "r", encoding="utf-8") as arquivo:
                 self.despesas = json.load(arquivo)
+                self.orcamento_mensal = "orcamento_mensal", 0.0
+                self.despesas = "despesas", []
 
     def salvar_despesas(self): #salva o json
+        dados = {
+            "orcamento_mensal": self.orcamento_mensal,
+            "despesas": self.despesas
+        }
         with open("despesas.json", "w", encoding="utf-8") as arquivo:
             json.dump(self.despesas, arquivo, indent=4)
 
