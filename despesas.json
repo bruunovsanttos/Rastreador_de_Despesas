@@ -38,5 +38,13 @@
         "categoria": "besteira",
         "data": "01/11/2024 12:44:27",
         "modificado": "01/11/2024 12:44:27"
+    },
+    {
+        "id": 7,
+        "valor": 19.0,
+        "descricao": "marmita",
+        "categoria": "almo\u00e7o",
+        "data": "05/11/2024 12:27:17",
+        "modificado": "05/11/2024 12:27:17"
     }
 ]
