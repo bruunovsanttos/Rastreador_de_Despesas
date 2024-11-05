@@ -155,6 +155,16 @@ class RastreadorDeDespesas:
                 total_mensal += despesa['valor']  # Adiciona o valor da despesa ao total mensal
         print(f"Total de despesas para o mês {mes}: R${total_mensal:.2f}")  # Exibe o total mensal formatado
 
+    def definir_orcamento(self):
+        valor = float(input("Digite um valor para o gasto mensal desejado: "))
+        if valor < 0:
+            print("A meta de gastoas não pode ser negativa")
+            return
+        self.orcamento_mensal = valor
+        self.salvar_despesas()
+        print(f"o Teto de gastos foi definido em R$:{valor:.2f}.")
+
+
 
 
 
