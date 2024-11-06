@@ -23,6 +23,10 @@ def main():
     parser_add = subparsers.add_parser("resumo_mensal", help="Resumo de gastos por mês")
     parser_add.add_argument("--mes",  type= int, required=True, help="mes de consumo selecionado")
 
+    parser_add = subparsers.add_parser("definir_gastos", help="define uma meta de gastos mensal")
+
+
+
 
 
 
@@ -43,6 +47,8 @@ def main():
         rastreador.resumo_gastos_totais()
     elif args.comando == "resumo_mensal":
         rastreador.resumo_mensal(args.mes)
+    elif args.comando == "definir_gastos":
+        rastreador.definir_orcamento()
 
 if __name__ == "__main__":
     main()
