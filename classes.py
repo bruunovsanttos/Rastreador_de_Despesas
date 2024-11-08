@@ -2,6 +2,7 @@ from datetime import datetime
 import os
 import json
 
+categorias = ["Alimentação", "Transporte", "Lazer", "Saúde", "Educação"]
 
 
 diretorio = "C:/Users/bruvieira/Desktop/Nova_pasta/Rastreador_de_despesas/Rastreador_de_Despesas"
