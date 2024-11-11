@@ -102,8 +102,8 @@ class RastreadorDeDespesas:
                 print(f"Despesa {despesa['id']}, {despesa['descricao']} deletada com sucesso.")
                 break
 
-            if not despesa_encontrada:
-                print("Não ha nenhuma despesa com este ID.")
+        if not despesa_encontrada:
+            print("Não ha nenhuma despesa com este ID.")
 
         self.salvar_despesas()
     #def excluir_despesas(self, id):
