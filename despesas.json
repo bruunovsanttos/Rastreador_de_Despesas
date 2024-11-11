@@ -1,50 +1,53 @@
-[
-    {
-        "id": 2,
-        "valor": 20.0,
-        "descricao": "almoco",
-        "categoria": "lanche",
-        "data": "30/10/2024 11:29:52",
-        "modificado": "30/10/2024 11:29:52"
-    },
-    {
-        "id": 3,
-        "valor": 20.0,
-        "descricao": "almoco",
-        "categoria": "lanche",
-        "data": "30/10/2024 11:30:29",
-        "modificado": "30/10/2024 11:30:29"
-    },
-    {
-        "id": 4,
-        "valor": 20.0,
-        "descricao": "almoco",
-        "categoria": "lanche",
-        "data": "30/10/2024 11:53:16",
-        "modificado": "30/10/2024 11:53:16"
-    },
-    {
-        "id": 5,
-        "valor": 102.36,
-        "descricao": "shopping",
-        "categoria": "lazer",
-        "data": "31/10/2024 12:35:31",
-        "modificado": "31/10/2024 13:03:46"
-    },
-    {
-        "id": 6,
-        "valor": 86.69,
-        "descricao": "gasto com besteira",
-        "categoria": "besteira",
-        "data": "01/11/2024 12:44:27",
-        "modificado": "01/11/2024 12:44:27"
-    },
-    {
-        "id": 7,
-        "valor": 19.0,
-        "descricao": "marmita",
-        "categoria": "almo\u00e7o",
-        "data": "05/11/2024 12:27:17",
-        "modificado": "05/11/2024 12:27:17"
-    }
-]
+{
+    "orcamento_mensal": 1000.0,
+    "despesas": [
+        {
+            "id": 2,
+            "valor": 20.0,
+            "descricao": "almoco",
+            "categoria": "lanche",
+            "data": "30/10/2024 11:29:52",
+            "modificado": "30/10/2024 11:29:52"
+        },
+        {
+            "id": 3,
+            "valor": 20.0,
+            "descricao": "almoco",
+            "categoria": "lanche",
+            "data": "30/10/2024 11:30:29",
+            "modificado": "30/10/2024 11:30:29"
+        },
+        {
+            "id": 4,
+            "valor": 20.0,
+            "descricao": "almoco",
+            "categoria": "lanche",
+            "data": "30/10/2024 11:53:16",
+            "modificado": "30/10/2024 11:53:16"
+        },
+        {
+            "id": 5,
+            "valor": 102.36,
+            "descricao": "shopping",
+            "categoria": "lazer",
+            "data": "31/10/2024 12:35:31",
+            "modificado": "31/10/2024 13:03:46"
+        },
+        {
+            "id": 6,
+            "valor": 86.69,
+            "descricao": "gasto com besteira",
+            "categoria": "besteira",
+            "data": "01/11/2024 12:44:27",
+            "modificado": "01/11/2024 12:44:27"
+        },
+        {
+            "id": 7,
+            "valor": 19.0,
+            "descricao": "marmita",
+            "categoria": "almo\u00e7o",
+            "data": "05/11/2024 12:27:17",
+            "modificado": "05/11/2024 12:27:17"
+        }
+    ]
+}

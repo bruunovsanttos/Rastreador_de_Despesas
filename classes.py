@@ -29,12 +29,12 @@ class RastreadorDeDespesas:
         self.orcamento_mensal = 0.0
         self.carregar_despesas()
 
-    def carregar_despesas(self): #abre o json
+    def carregar_despesas(self):  # abre o json
         if os.path.exists(caminho_arquivo):
             with open("despesas.json", "r", encoding="utf-8") as arquivo:
-                self.despesas = json.load(arquivo)
-                self.orcamento_mensal = "orcamento_mensal", 0.0
-                self.despesas = "despesas", []
+                dados = json.load(arquivo)  # Carrega os dados do arquivo
+                self.despesas = dados.get("despesas", [])  # Certifica-se de pegar a lista de despesas
+                self.orcamento_mensal = dados.get("orcamento_mensal", 0.0)  # Pega o orçamento
 
     def salvar_despesas(self): #salva o json
         dados = {
@@ -76,7 +76,7 @@ class RastreadorDeDespesas:
         }
         if categoria not in categorias:
             print(f"Categoria invalida, você deve escolher categoria entre:", categorias)
-            return 
+            return
 
         self.despesas.append(novo_gasto)
         self.salvar_despesas()
