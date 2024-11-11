@@ -42,7 +42,8 @@ class RastreadorDeDespesas:
             "despesas": self.despesas
         }
         with open("despesas.json", "w", encoding="utf-8") as arquivo:
-            json.dump(self.despesas, arquivo, indent=4)
+            json.dump(dados, arquivo, indent=4)
+
 
     def gerar_id(self):
         ids_validos = []  # Inicializa uma lista vazia para IDs válidos
