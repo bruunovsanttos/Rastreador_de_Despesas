@@ -74,6 +74,9 @@ class RastreadorDeDespesas:
         "modificado": self.data_atual()
 
         }
+        if categoria not in categorias:
+            print(f"Categoria invalida, você deve escolher categoria entre:", categorias)
+            return 
 
         self.despesas.append(novo_gasto)
         self.salvar_despesas()
@@ -126,7 +129,10 @@ class RastreadorDeDespesas:
         for despesa in self.despesas:
             if despesa['id'] == id:
                 despesa['descricao'] = str(input("Qual descrição você deseja colocar agora?"))
-                despesa['valor'] = float(input("qual o valor gasto?"))
+                despesa['valor'] = novo_valor = float(input("qual o valor gasto?"))
+                if novo_valor <0:
+                    print("O novo valor não pode ser negativo")
+                    return
                 despesa['modificado'] = self.data_atual()
                 despesa_encontrada = True
                 print(f"A desepsa {despesa['id']} foi alterada como {despesa['descricao']} e valor de {despesa['valor']} modificado em {despesa['modificado']}.")
