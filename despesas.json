@@ -56,6 +56,22 @@
             "categoria": "Alimenta\u00e7\u00e3o",
             "data": "11/11/2024 12:59:16",
             "modificado": "11/11/2024 12:59:16"
+        },
+        {
+            "id": 9,
+            "valor": 38.0,
+            "descricao": "almo\u00e7o",
+            "categoria": "Alimenta\u00e7\u00e3o",
+            "data": "12/11/2024 12:31:10",
+            "modificado": "12/11/2024 12:31:10"
+        },
+        {
+            "id": 10,
+            "valor": 38.0,
+            "descricao": "almo\u00e7o",
+            "categoria": "Alimenta\u00e7\u00e3o",
+            "data": "12/11/2024 12:31:18",
+            "modificado": "12/11/2024 12:31:18"
         }
     ]
 }
