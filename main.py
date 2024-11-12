@@ -11,6 +11,8 @@ def main():
     parser_add.add_argument("--categoria", type=str, help="Categoria da despesa")
 
     parser_add = subparsers.add_parser("mostrar", help="Mostrar despesas")
+    parser_add.add_argument("--categoria", type=str, required=True, help="Categoria que você deseja ver")
+    
 
     parser_add = subparsers.add_parser("deletar", help="Deleta uma despesa")
     parser_add.add_argument("--id", type=int, required=True, help="Id da despesa")
