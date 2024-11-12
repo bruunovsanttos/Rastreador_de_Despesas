@@ -84,16 +84,33 @@ class RastreadorDeDespesas:
 
         print("Despesa salva com sucesso.")
 
-    def mostrar_despesas(self):
-
+    def mostrar_despesas(self, categoria = None):
         self.carregar_despesas()
 
-        if not self.despesas:
-            print("Não ha despesas para mostrar.")
-            return
-            
-        for despesa in self.despesas:
-            print(f"Id: {despesa['id']} \n Descrição: {despesa['descricao']} \n Valor: {despesa['valor']:.2f} \n Data: {despesa['data']} \n Categoria: {despesa['categoria']} \n Modificado em: {despesa['modificado']}")
+        if categoria:
+            if categoria not in categorias:
+                print(f"Categoria: {categoria} invalida. As categorias são: {categorias}")
+
+            despesas_categoria = []
+
+            for despesa in self.despesas:
+                if despesa['categoria'] == categoria:
+                    despesas_categoria.append(despesa)
+
+            if despesas_categoria:
+                for despesa in despesas_categoria:
+                    print(f"Id: {despesa['id']} \n Descrição: {despesa['descricao']} \n Valor: {despesa['valor']:.2f} \n Data: {despesa['data']} \n Categoria: {despesa['categoria']} \n Modificado em: {despesa['modificado']}")
+
+            else:
+                print(f"Não há despesas cadastradas para a categoria {categoria}")
+        else:
+            if not self.despesas:
+                print("Não há despesas para mostrar")
+                return
+
+            for despesa in self.despesas:
+                print(f"Id: {despesa['id']} \n Descrição: {despesa['descricao']} \n Valor: {despesa['valor']:.2f} \n Data: {despesa['data']} \n Categoria: {despesa['categoria']} \n Modificado em: {despesa['modificado']}")
+
 
     def excluir_despesas(self, id):
         self.carregar_despesas()
