@@ -194,11 +194,14 @@ class RastreadorDeDespesas:
     def exportar_csv(self):
         if os.path.exists(caminho_arquivo):
             with open ("despesas.csv", mode= "w", newline='', enconding="utf-8") as arquivo:
-                escritor = csv.writer(arquivo_csv)
+                escritor = csv.writer(arquivo)
 
                 escritor.writerow(['ID', 'Descrição', 'Valor', 'Categoria', 'Data', 'Modificado'])
-                
+                for despesa in self.despesas:
+                    escritor.writerow([despesa['id'], despesa['descricao'], despesa['valor'], despesa['categoria'], despesa['data'],despesa['modificado']])
+            print("Arquivo exportado com sucesso")
 
+    
 
 
 
