@@ -27,8 +27,7 @@ def main():
 
     parser_add = subparsers.add_parser("definir_gastos", help="define uma meta de gastos mensal")
 
-
-
+    parser_add = subparsers.add_parser("exportar", help="Exporta arquivo CSV do programa")
 
 
 
@@ -51,6 +50,8 @@ def main():
         rastreador.resumo_mensal(args.mes)
     elif args.comando == "definir_gastos":
         rastreador.definir_orcamento()
+    elif args.comando == "exportar":
+        rastreador.exportar_csv()
 
 if __name__ == "__main__":
     main()
