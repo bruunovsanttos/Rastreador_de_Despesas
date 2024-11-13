@@ -1,6 +1,7 @@
 from datetime import datetime
 import os
 import json
+import csv
 
 categorias = ["Alimentação", "Transporte", "Lazer", "Saúde", "Educação"]
 
@@ -191,7 +192,13 @@ class RastreadorDeDespesas:
         print(f"o Teto de gastos foi definido em R$:{valor:.2f}.")
 
     def exportar_csv(self):
-        pass
+        if os.path.exists(caminho_arquivo):
+            with open ("despesas.csv", mode= "w", newline='', enconding="utf-8") as arquivo:
+                escritor = csv.writer(arquivo_csv)
+
+                escritor.writerow(['ID', 'Descrição', 'Valor', 'Categoria', 'Data', 'Modificado'])
+                
+
 
 
 
