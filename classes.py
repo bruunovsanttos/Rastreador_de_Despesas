@@ -121,6 +121,7 @@ class RastreadorDeDespesas:
             if despesa['id'] == id:
                 self.despesas.remove(despesa)
                 print(f"Despesa {despesa['id']}, {despesa['descricao']} deletada com sucesso.")
+                despesa_encontrada = True
                 break
 
         if not despesa_encontrada:
