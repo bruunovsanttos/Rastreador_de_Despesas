@@ -67,6 +67,15 @@ class RastreadorDeDespesas:
 
         self.carregar_despesas()
 
+        total_atual=0
+        for despesa in self.despesas:
+            total_atual += despesa['valor']
+
+        if total_atual + valor > self.orcamento_mensal:
+            print()#colocar uma mensagem de excedendo ...
+            return
+
+
         novo_gasto = {
         "id" : self.gerar_id(),
         "valor" : valor,
@@ -189,7 +198,7 @@ class RastreadorDeDespesas:
             return
         self.orcamento_mensal = valor
         self.salvar_despesas()
-        print(f"o Teto de gastos foi definido em R$:{valor:.2f}.")
+        print(f"O Teto de gastos foi definido em R$:{valor:.2f}.")
 
     def exportar_csv(self):
         if os.path.exists(caminho_arquivo):
