@@ -30,7 +30,6 @@ def main():
     parser_add = subparsers.add_parser("exportar", help="Exporta arquivo CSV do programa")
 
 
-
     args = parser.parse_args()
 
     rastreador = classes.RastreadorDeDespesas()  # Cria a instância do rastreador
