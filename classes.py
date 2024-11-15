@@ -71,6 +71,9 @@ class RastreadorDeDespesas:
         for despesa in self.despesas:
             total_atual += despesa['valor']
 
+        if total_atual>= 0.8 * self.orcamento_mensal:
+            print(f"você ja utiizou R$ {total_atual:.2f} do seu teto que e de {self.orcamento_mensal}, faltam apenas R$ {self.orcamento_mensal - total_atual:.2f} para atingir seu teto de gastos")
+
         if total_atual + valor > self.orcamento_mensal:
             print(f"O valor {valor:.2f} vai exceder o total de gastos de {self.orcamento_mensal}")
             return
