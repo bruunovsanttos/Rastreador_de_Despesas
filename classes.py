@@ -169,6 +169,7 @@ class RastreadorDeDespesas:
         print(f"Total de despesas é de: R${total:.2f}")
 
     def resumo_mensal(self, mes):
+        self. carregar_despesas()
 
         if not (1<= mes <=12):
             print("O mês escolhido não existe, coloque um mês entre 1 e 12")
@@ -176,14 +177,21 @@ class RastreadorDeDespesas:
 
 
         total_mensal = 0
+        despesas_mes = []
+
         for despesa in self.despesas:
 
-            mes_despesa = int(despesa['data'].split("/")[1])
+            data_despesa = despesa['data']
+            partes_data = data_despesa.split("/")
+            mes_despesa = int(partes_data[1])
+
             if mes_despesa == mes:
                 total_mensal += despesa['valor']
+                despesas_mes.append(despesa)
+
         print(f"Total de despesas para o mês {mes}: R${total_mensal:.2f}")
 
-        for despesa in mes_despesa:
+        for despesa in despesas_mes:
             print(f"ID: {despesa['id']} \n Descrição: {despesa['descricao']} \n Valor: R${despesa['valor']:.2f} \n Categoria: {despesa['categoria']} \n Data: {despesa['data']} \n Modificado em: {despesa['modificado']}")
 
         else:
