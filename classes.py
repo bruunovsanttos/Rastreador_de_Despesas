@@ -33,11 +33,11 @@ class RastreadorDeDespesas:
     def carregar_despesas(self):  # abre o json
         if os.path.exists(caminho_arquivo):
             with open("despesas.json", "r", encoding="utf-8") as arquivo:
-                dados = json.load(arquivo)  # Carrega os dados do arquivo
-                self.despesas = dados.get("despesas", [])  # Certifica-se de pegar a lista de despesas
-                self.orcamento_mensal = dados.get("orcamento_mensal", 0.0)  # Pega o orçamento
+                dados = json.load(arquivo)
+                self.despesas = dados.get("despesas", [])
+                self.orcamento_mensal = dados.get("orcamento_mensal", 0.0)
 
-    def salvar_despesas(self): #salva o json
+    def salvar_despesas(self):
         dados = {
             "orcamento_mensal": self.orcamento_mensal,
             "despesas": self.despesas
@@ -47,19 +47,19 @@ class RastreadorDeDespesas:
 
 
     def gerar_id(self):
-        ids_validos = []  # Inicializa uma lista vazia para IDs válidos
+        ids_validos = []
 
         for despesa in self.despesas:
-            if despesa['id'] is not None:  # Verifica se o ID não é None
-                ids_validos.append(despesa['id'])  # Adiciona IDs válidos à lista
+            if despesa['id'] is not None:
+                ids_validos.append(despesa['id'])
 
-        if not ids_validos:  # Se não houver IDs válidos
+        if not ids_validos:
             return 1
         else:
-            return max(ids_validos) + 1  # Retorna o maior ID + 1
+            return max(ids_validos) + 1
 
     def data_atual(self):
-        data = datetime.now()  # Agora está correto
+        data = datetime.now()
         data_formatada = data.strftime("%d/%m/%Y %H:%M:%S")
         return data_formatada
 
@@ -72,7 +72,7 @@ class RastreadorDeDespesas:
             total_atual += despesa['valor']
 
         if total_atual + valor > self.orcamento_mensal:
-            print()#colocar uma mensagem de excedendo ...
+            print(f"O valor {valor:.2f} vai exceder o total de gastos de {self.orcamento_mensal}")
             return
 
 
