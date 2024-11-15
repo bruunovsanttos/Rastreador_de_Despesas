@@ -138,17 +138,6 @@ class RastreadorDeDespesas:
             print("Não ha nenhuma despesa com este ID.")
 
         self.salvar_despesas()
-    #def excluir_despesas(self, id):
-    #self.carregar_despesas()
-
-    #for despesa in self.despesas == 'id':
-    #    if not id in despesas:
-     #       print("Não há nenhuma despesa com este ID.")
-      #  else:
-       #     self.despesas.remove(despesa)
-        #    print(f"Despesa {despesa['id']}, {despesa['descricao']} deletada com sucesso.")
-         #   break
-
 
     def alterar_despesa(self, id):
         self.carregar_despesas()
@@ -173,9 +162,6 @@ class RastreadorDeDespesas:
         self.salvar_despesas()
 
 
-    def gastos_tempo(self):
-        pass
-
     def resumo_gastos_totais(self):
         total = 0
         for despesa in self.despesas:
@@ -183,13 +169,25 @@ class RastreadorDeDespesas:
         print(f"Total de despesas é de: R${total:.2f}")
 
     def resumo_mensal(self, mes):
-        total_mensal = 0  # Inicializa o total mensal como zero
-        for despesa in self.despesas:  # Itera sobre cada despesa
-            # Extrai o mês da data da despesa
+
+        if not (1<= mes <=12):
+            print("O mês escolhido não existe, coloque um mês entre 1 e 12")
+            return
+
+
+        total_mensal = 0
+        for despesa in self.despesas:
+
             mes_despesa = int(despesa['data'].split("/")[1])
-            if mes_despesa == mes:  # Verifica se o mês da despesa é igual ao mês desejado
-                total_mensal += despesa['valor']  # Adiciona o valor da despesa ao total mensal
-        print(f"Total de despesas para o mês {mes}: R${total_mensal:.2f}")  # Exibe o total mensal formatado
+            if mes_despesa == mes:
+                total_mensal += despesa['valor']
+        print(f"Total de despesas para o mês {mes}: R${total_mensal:.2f}")
+
+        for despesa in mes_despesa:
+            print(f"ID: {despesa['id']} \n Descrição: {despesa['descricao']} \n Valor: R${despesa['valor']:.2f} \n Categoria: {despesa['categoria']} \n Data: {despesa['data']} \n Modificado em: {despesa['modificado']}")
+
+        else:
+            print(f"Não ha despesas para o mês solicitado {mes}")
 
     def definir_orcamento(self):
         valor = float(input("Digite um valor para o gasto mensal desejado: "))
