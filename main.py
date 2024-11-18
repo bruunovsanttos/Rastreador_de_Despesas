@@ -32,10 +32,9 @@ def main():
 
     args = parser.parse_args()
 
-    rastreador = classes.RastreadorDeDespesas()  # Cria a instância do rastreador
+    rastreador = classes.RastreadorDeDespesas()
 
     if args.comando == "add":
-        # Chama o método de adicionar despesas passando os argumentos
         rastreador.adicionar_despesas(args.descricao, args.valor, args.categoria)
     elif args.comando == "mostrar":
         rastreador.mostrar_despesas()
