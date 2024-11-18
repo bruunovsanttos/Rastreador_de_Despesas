@@ -37,3 +37,9 @@ Este projeto esta na minha base de projetos retirados do site [Roadmap.sh](https
 [Datetime](https://docs.python.org/pt-br/3/library/datetime.html) utilizado para a atualização de datas do programa nos prints de criação e modificação.    
 
 [OS](https://docs.python.org/pt-br/3/library/os.html#module-os) para manipulação de caminhos do programa e controle dos arquivos.    
+
+
+### Comandos
+Os comandos utlizados para funcionar o sistema de rastreamento são :  
+
+![comandos.png](comandos.png)
