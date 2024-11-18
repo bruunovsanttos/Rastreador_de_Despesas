@@ -46,7 +46,7 @@ def main():
     elif args.comando == "gastos":
         rastreador.resumo_gastos_totais()
     elif args.comando == "resumo_mensal":
-        rastreador.resumo_mensal(args.mes)
+        rastreador.resumo_mensal(args.mes, args.ano)
     elif args.comando == "definir_gastos":
         rastreador.definir_orcamento()
     elif args.comando == "exportar":

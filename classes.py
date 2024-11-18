@@ -171,7 +171,7 @@ class RastreadorDeDespesas:
             total += despesa['valor']
         print(f"Total de despesas é de: R${total:.2f}")
 
-    def resumo_mensal(self, mes):
+    def resumo_mensal(self, mes, ano):
         self. carregar_despesas()
 
         if not (1<= mes <=12):
@@ -186,7 +186,7 @@ class RastreadorDeDespesas:
 
             data_despesa = despesa['data']
             partes_data = data_despesa.split("/")
-            mes_despesa = int(partes_data[1])
+            mes_despesa = int(partes_data[1], partes_data[2])
 
             if mes_despesa == mes:
                 total_mensal += despesa['valor']
