@@ -171,7 +171,7 @@ class RastreadorDeDespesas:
             total += despesa['valor']
         print(f"Total de despesas é de: R${total:.2f}")
 
-    def resumo_mensal(self, mes, ano):
+    def resumo_mensal(self, mes):
         self. carregar_despesas()
 
         if not (1<= mes <=12):
