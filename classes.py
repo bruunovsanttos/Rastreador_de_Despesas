@@ -186,7 +186,7 @@ class RastreadorDeDespesas:
 
             data_despesa = despesa['data']
             partes_data = data_despesa.split("/")
-            mes_despesa = int(partes_data[1], partes_data[2])
+            mes_despesa = int(partes_data[1])
 
             if mes_despesa == mes:
                 total_mensal += despesa['valor']
@@ -201,6 +201,8 @@ class RastreadorDeDespesas:
             print(f"Não ha despesas para o mês solicitado {mes}")
 
     def definir_orcamento(self):
+        print(f"TEto de gastos definido atuamento com o valor de: R${self.orcamento_mensal:.2f}")
+
         valor = float(input("Digite um valor para o gasto mensal desejado: "))
         if valor < 0:
             print("A meta de gastos não pode ser negativa")
