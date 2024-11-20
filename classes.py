@@ -69,7 +69,7 @@ class RastreadorDeDespesas:
 
         if valor < 0:
             print("O valor não pode ser negativo, tente novamente.")
-        
+
         total_atual=0
         for despesa in self.despesas:
             total_atual += despesa['valor']
@@ -150,10 +150,11 @@ class RastreadorDeDespesas:
         despesa_encontrada  = False
 
         for despesa in self.despesas:
+
             if despesa['id'] == id:
                 despesa['descricao'] = str(input("Qual descrição você deseja colocar agora?"))
                 despesa['valor'] = novo_valor = float(input("qual o valor gasto?"))
-                if novo_valor <0:
+                if novo_valor < 0:
                     print("O novo valor não pode ser negativo")
                     return
                 despesa['modificado'] = self.data_atual()
