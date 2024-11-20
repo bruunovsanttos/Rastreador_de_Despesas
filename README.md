@@ -4,7 +4,6 @@ Neste projeto serão colocadas em práticas para que no fim seja entregue um ras
 Este projeto esta na minha base de projetos retirados do site [Roadmap.sh](https://roadmap.sh/u/bruunovsanttos), estou seguindo os projetos da trilha de back-end.
 
 ## Requisitos de Projeto 📏📐
-### Requisitos Funcionais 📏
 #### Funcionalidades Principais
 1. Adicionar uma despesa com descrição, valor e categoria.
 2. Atualizar uma despesa existente.   
@@ -12,8 +11,10 @@ Este projeto esta na minha base de projetos retirados do site [Roadmap.sh](https
 4. Visualizar todas as despesas cadastradas.
 5. Resumo geral das despesas.
 6. Resumo das despesas de um mês específico.
+
 #### Funcionalidades Adicionais
-Exportação de despesas para arquivo CSV.
+Exportação de despesas para arquivo CSV.  
+
 Definição de um orçamento mensal e alertas para gastos próximos ou acima do limite.
 
 
@@ -34,23 +35,30 @@ Definição de um orçamento mensal e alertas para gastos próximos ou acima do 
 
 
 
-#Estrutura do Projeto 📂
-#rastreador_de_despesas.py: Arquivo principal que contém a lógica do programa.
-despesas.json: Arquivo que armazena os dados das despesas de forma persistente.
-despesas.csv: Arquivo exportado com as despesas, gerado sob demanda.
-comandos.png: Imagem com os comandos disponíveis (opcional).
-Como Usar o Programa ▶️
-Clone o repositório:
-bash
-Copiar código
-git clone https://github.com/seu-usuario/rastreador-de-despesas.git
+# Estrutura do Projeto 📂  
+
+rastreador_de_despesas.py: Arquivo principal que contém a lógica do programa.  
+
+despesas.json: Arquivo que armazena os dados das despesas de forma persistente.  
+
+despesas.csv: Arquivo exportado com as despesas, gerado sob demanda.  
+
+comandos.png: Imagem com os comandos disponíveis (opcional).  
+
+
+
+### Como Usar o Programa ▶️
+Clone o repositório:  
+
+   bash
+         git clone https://github.com/seu-usuario/rastreador-de-despesas.git
+         
 Navegue até a pasta do projeto:
+
 bash
-Copiar código
 cd rastreador-de-despesas
 Execute o programa:
 bash
-Copiar código
 python rastreador_de_despesas.py
 ### Comandos Disponíveis  
 Os principais comandos para interação com o programa incluem:
