@@ -37,42 +37,49 @@ Definição de um orçamento mensal e alertas para gastos próximos ou acima do 
 
 # Estrutura do Projeto 📂  
 
-rastreador_de_despesas.py: Arquivo principal que contém a lógica do programa.  
+* rastreador_de_despesas.py: Arquivo principal que contém a lógica do programa.  
 
-despesas.json: Arquivo que armazena os dados das despesas de forma persistente.  
+* despesas.json: Arquivo que armazena os dados das despesas de forma persistente.  
 
-despesas.csv: Arquivo exportado com as despesas, gerado sob demanda.  
+* despesas.csv: Arquivo exportado com as despesas, gerado sob demanda.  
 
-comandos.png: Imagem com os comandos disponíveis (opcional).  
+* comandos.png: Imagem com os comandos disponíveis (opcional).  
 
 
 
-### Como Usar o Programa ▶️
+### Como Usar o Programa ▶️  
+
 Clone o repositório:  
 
-   bash
-         git clone https://github.com/seu-usuario/rastreador-de-despesas.git
+    bash  
+        git clone https://github.com/seu-usuario/rastreador-de-despesas.git
          
 Navegue até a pasta do projeto:
 
-bash
-cd rastreador-de-despesas
-Execute o programa:
-bash
-python rastreador_de_despesas.py
+    bash
+        cd rastreador-de-despesas
+
+
+Execute o programa:    
+
+    bash
+        python rastreador_de_despesas.py  
+
+
+
 ### Comandos Disponíveis  
 Os principais comandos para interação com o programa incluem:
 
-|Comando|	Descrição|
-|-------|------------|
-|adicionar|	Adiciona uma nova despesa.|
-|atualizar|	Atualiza uma despesa existente.|
-|excluir|	Remove uma despesa.|
-|listar|	Lista todas as despesas.|
-|resumo|	Mostra um resumo geral das despesas.|
-|mensal| Mostra despesas de um mês específico.|
-|exportar|	Exporta despesas para CSV.|
-|orcamento|	Define um teto de gastos mensais.|
+|   Comando   |               	Descrição               |
+|:-----------:|:--------------------------------------:|
+| `adicionar` |      	Adiciona uma nova despesa.       |
+| `atualizar` |    	Atualiza uma despesa existente.    |
+|  `excluir`  |          	Remove uma despesa.          |
+|  `listar`   |       	Lista todas as despesas.        |
+|  `resumo`   | 	Mostra um resumo geral das despesas.  |
+|  `mensal`   | Mostra despesas de um mês específico.  |
+| `exportar`  |      	Exporta despesas para CSV.       |
+|  `orcamento`  |   	Define um teto de gastos mensais.   |
   
 ### Exemplos de Uso 📖
 1. **Adicionar uma nova despesa**:
