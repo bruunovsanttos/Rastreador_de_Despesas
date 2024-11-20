@@ -67,6 +67,9 @@ class RastreadorDeDespesas:
 
         self.carregar_despesas()
 
+        if valor < 0:
+            print("O valor não pode ser negativo, tente novamente.")
+        
         total_atual=0
         for despesa in self.despesas:
             total_atual += despesa['valor']
@@ -77,8 +80,6 @@ class RastreadorDeDespesas:
         if total_atual + valor > self.orcamento_mensal:
             print(f"O valor {valor:.2f} vai exceder o total de gastos de {self.orcamento_mensal}")
             return
-        if self.valor > 0:
-            print("O valor não pode ser negativo, tente novamente.")
 
         novo_gasto = {
         "id" : self.gerar_id(),
