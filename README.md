@@ -67,23 +67,21 @@ Os principais comandos para interação com o programa incluem:
 |orcamento|	Define um teto de gastos mensais.|
   
 ### Exemplos de Uso 📖
-Adicionar uma nova despesa:
+1. **Adicionar uma nova despesa**:
+   ```bash
+   python rastreador_de_despesas.py adicionar --descricao "Supermercado" --valor 150.75 --categoria "Alimentação"
+   
 
->bash
-Copiar código
-python rastreador_de_despesas.py adicionar --descricao "Supermercado" --valor 150.75 --categoria "Alimentação"
+2. **Gerar resumo mensal:**
 
-Gerar resumo mensal:
+    ```bash
+    python rastreador_de_despesas.py resumo --mes 11 
+ 
 
->bash
-Copiar código
-python rastreador_de_despesas.py resumo --mes 11
+3. **Exportar dados para CSV:**
 
-Exportar dados para CSV:
-
->bash
-Copiar código
-python rastreador_de_despesas.py exportar  
+    ```bash
+    python rastreador_de_despesas.py exportar  
 
 
 ### Contribuindo com o Projeto 🤝  
@@ -94,11 +92,15 @@ Crie uma branch para sua funcionalidade:
 bash
 Copiar código
 git checkout -b minha-nova-funcionalidade
-Envie um Pull Request descrevendo suas alterações.  
+Envie um Pull Request descrevendo suas alterações. 
+
+
 ### Próximas Melhorias 🌟
 Refatoração do código para aumentar a legibilidade.
 Adição de testes automatizados com unittest ou pytest.
-Implementação de uma interface gráfica (GUI) como expansão futura.  
+Implementação de uma interface gráfica (GUI) como expansão futura.
+
+
 ### Licença 📜
 Este projeto está licenciado sob a MIT License.
 
