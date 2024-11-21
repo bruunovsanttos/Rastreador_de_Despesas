@@ -126,5 +126,15 @@ Este projeto está licenciado sob a MIT License.
 
 ### Fotos do Projeto
 
+Comandos:  
+![comandos.png](imagens%2Fcomandos.png)
 
 
+Add despesa:  
+![add_despesa.png](imagens%2Fadd_despesa.png)
+  
+Deletar Despesas:  
+![deletar_despesa.png](imagens%2Fdeletar_despesa.png)  
+
+Resumo mensal:  
+![resumo_mensal.png](imagens%2Fresumo_mensal.png)
