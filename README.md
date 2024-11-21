@@ -1,7 +1,7 @@
 # Rastreador de Despesas
 
 Neste projeto serão práticas para que no fim seja entregue um rastreador de despesas via CLI.  
-Este projeto esta na minha base de projetos retirados do site [Roadmap.sh](https://roadmap.sh/u/bruunovsanttos), estou seguindo os projetos da trilha de back-end.
+Este projeto esta na minha base de projetos retirados do site [Roadmap.sh](https://roadmap.sh/projects/expense-tracker), estou seguindo os projetos da trilha de back-end.
 
 ## Requisitos de Projeto 📏📐
 #### Funcionalidades Principais
