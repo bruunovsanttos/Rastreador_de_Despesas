@@ -36,13 +36,15 @@ Definição de um orçamento mensal e alertas para gastos próximos ou acima do 
 
 # Estrutura do Projeto 📂  
 
-* rastreador_de_despesas.py: Arquivo principal que contém a lógica do programa.  
+* main.py: arquivo onde estão salvos os comandos para atuação do programa.
+
+* classes.py: Arquivo principal que contém a lógica do programa.  
 
 * despesas.json: Arquivo que armazena os dados das despesas de forma persistente.  
 
 * despesas.csv: Arquivo exportado com as despesas, gerado sob demanda.  
 
-* comandos.png: Imagem com os comandos disponíveis (opcional).  
+* imagens: pasta com imagens de demoswtração do programa.  
 
 
 
@@ -62,7 +64,7 @@ Navegue até a pasta do projeto:
 Execute o programa:    
 
     bash
-        python rastreador_de_despesas.py  
+        python main.py add --descricao "" --valor 00.00 --categoria ""  
 
 
 
@@ -71,12 +73,11 @@ Os principais comandos para interação com o programa incluem:
 
 |   Comando    |               	Descrição               |
 |:------------:|:--------------------------------------:|
-| `adicionar`  |      	Adiciona uma nova despesa.       |
-| `atualizar`  |    	Atualiza uma despesa existente.    |
+|    `add`     |      	Adiciona uma nova despesa.       |
+|  `alterar`   |    	Atualiza uma despesa existente.    |
 |  `excluir`   |          	Remove uma despesa.          |
-|   `listar`   |       	Lista todas as despesas.        |
+|  `mostrar`   |       	Lista todas as despesas.        |
 |   `resumo`   | 	Mostra um resumo geral das despesas.  |
-|   `mensal`   | Mostra despesas de um mês específico.  |
 |  `exportar`  |      	Exporta despesas para CSV.       |
 | `orcamento ` |   	Define um teto de gastos mensais.   |
   
