@@ -116,8 +116,8 @@ Contribuições são bem-vindas! Para contribuir:
 
 
 ### Próximas Melhorias 🌟
-Refatoração do código para aumentar a legibilidade. (implementações futuras) 
-Adição de testes automatizados com unittest ou pytest. (implementações futuras)  
+Refatoração do código para aumentar a legibilidade. (implementações futuras)   
+Adição de testes automatizados com unittest ou pytest. (implementações futuras)    
 Implementação de uma interface gráfica (GUI) como expansão futura. (implementações futuras)  
 
 
