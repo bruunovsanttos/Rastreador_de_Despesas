@@ -1,7 +1,7 @@
 # Rastreador de Despesas
 
-Neste projeto serão práticas para que no fim seja entregue um rastreador de despesas via CLI.  
-Este projeto esta na minha base de projetos retirados do site [Roadmap.sh](https://roadmap.sh/projects/expense-tracker), estou seguindo os projetos da trilha de back-end.
+Neste projeto serão aplicadas práticas para que, no fim, seja entregue um rastreador de despesas via CLI.  
+Este projeto está na minha base de projetos retirados do site  [Roadmap.sh](https://roadmap.sh/projects/expense-tracker), estou seguindo os projetos da trilha de back-end.
 
 ## Requisitos de Projeto 📏📐
 #### Funcionalidades Principais
@@ -17,20 +17,20 @@ Exportação de despesas para arquivo CSV.
 Definição de um orçamento mensal e alertas para gastos próximos ou acima do limite.
 
 
-## Ferramentas Do projeto 🔨🔧  
-### Lingaugem de programação
+## Ferramentas do projeto 🔨🔧  
+### Linguagem de programação
 #### Python 3.12  🐍
 ### Bibliotecas Utilizadas📚
 
-[Argparse](https://docs.python.org/pt-br/3/library/argparse.html#module-argparse) a utilização dessa biblioteca consiste na maipulação correta dos argumentos dados pelo usuário do programa não havendo erros.  
+[Argparse](https://docs.python.org/pt-br/3/library/argparse.html#module-argparse) A utilização dessa biblioteca consiste na manipulação correta dos argumentos dados pelo usuário do programa, sem que ocorram erros.  
 
-[JSON](https://docs.python.org/pt-br/3/library/json.html) utilizada para a manipulação do arquivo que serve de base para as adiões e atulizações de despesas.  
+[JSON](https://docs.python.org/pt-br/3/library/json.html) Utilizada para a manipulação do arquivo que serve de base para as adições e atualizações de despesas.  
 
-[CSV](https://docs.python.org/pt-br/3/library/csv.html#module-csv) utilizada para a conversão dos dados para um arquivo CSV.  
+[CSV](https://docs.python.org/pt-br/3/library/csv.html#module-csv) Utilizada para a conversão dos dados para um arquivo CSV.  
 
-[Datetime](https://docs.python.org/pt-br/3/library/datetime.html) utilizado para a atualização de datas do programa nos prints de criação e modificação.    
+[Datetime](https://docs.python.org/pt-br/3/library/datetime.html) Utilizada para a atualização das datas no programa, nos prints de criação e modificação.      
 
-[OS](https://docs.python.org/pt-br/3/library/os.html#module-os) para manipulação de caminhos do programa e controle dos arquivos.    
+[OS](https://docs.python.org/pt-br/3/library/os.html#module-os) Para manipulação de caminhos do programa e controle dos arquivos.    
 
 
 
@@ -44,7 +44,7 @@ Definição de um orçamento mensal e alertas para gastos próximos ou acima do 
 
 * despesas.csv: Arquivo exportado com as despesas, gerado sob demanda.  
 
-* imagens: pasta com imagens de demoswtração do programa.  
+* imagens: pasta com imagens de demonstração do programa.  
 
 
 
